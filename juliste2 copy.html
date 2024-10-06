@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Juliste</title>
+  <link rel="stylesheet" href="poster-template.css">
+  <style>
+    body {
+      transform-origin:0 0;
+      scale: 0.2; /* POISTA SCALE PAINOVERSIOON TAI KUN HALUAT KATSOA OIKEASSA KOOSSA: */
+    }
+
+    .poster-content {
+      background-color: #42000e;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* New Elements from First Code */
+    .circle1 {
+      width: 240mm;
+      height: 180mm;
+      background: #00000000;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #670439 35%, #1d35ba 60%, transparent 81%, transparent 100%);
+      background-size: 420mm 6mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 40mm;
+      left: -90mm;
+      z-index: 2;
+    }
+
+    .sphere1 {
+      position: absolute;
+      top: 88mm;
+      left: 48mm;
+      width: 80mm;
+      height: 80mm;
+      background: linear-gradient(45deg, blue, red);
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 2;
+      backdrop-filter: blur(30mm);
+    }
+
+    .circle2 {
+      width: 270mm;
+      height: 270mm;
+      background: #5d050500;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #9d5604 35%, #4d1ab3 60%, transparent 81%, transparent 100%);
+      background-size: 450mm 3mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 270mm;
+      left: 280mm;
+      z-index: 4;
+      transform: rotate(0.5turn);
+    }
+
+    .sphere2 {
+      position: absolute;
+      top: 360mm;
+      left: 240mm;
+      width: 80mm;
+      height: 80mm;
+      background: linear-gradient(60deg, rgb(70, 2, 60) 5%, rgb(147, 123, 45));
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+      backdrop-filter: blur(30mm);
+    }
+
+
+    .circle3 {
+      width: 270mm;
+      height: 270mm;
+      background: #5d050500;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #9d5604 35%, #4d1ab3 60%, transparent 81%, transparent 100%);
+      background-size: 450mm 3mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 500mm;
+      left: 300mm;
+      z-index: 4;
+    }
+
+    .sphere3 {
+      position: absolute;
+      top: 580mm;
+      left: 440mm;
+      width: 100mm;
+      height: 100mm;
+      background: linear-gradient(60deg, rgb(70, 2, 60) 5%, rgb(147, 123, 45));
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+      backdrop-filter: blur(30mm);
+    }
+
+    .circle4 {
+      width: 400mm;
+      height: 400mm;
+      background: #00000000;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #670439 35%, #1d35ba 60%, transparent 81%, transparent 100%);
+      background-size: 420mm 6mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 700mm;
+      left:-50mm;
+      z-index: 2;
+      transform: rotate(0.5turn);
+
+    }
+
+    .sphere4 {
+      position: absolute;
+      top: 760mm;
+      left: 50mm;
+      width: 200mm;
+      height: 200mm;
+      background: linear-gradient(45deg, blue, red);
+      background-size: 300mm 300mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+      backdrop-filter: blur(30mm);
+    }
+
+    .circl {
+      width: 500mm;
+      height: 2000mm;
+      background: #5d050500;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #085d35 35%, #4d1ab3 60%, transparent 81%, transparent 100%);
+      background-size: 450mm 3mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 
+      opacity: 0.7;
+      position: absolute;
+      top: -20mm;
+      left: 300mm;
+      z-index: 4;
+      transform: rotate(.4);
+    }
+
+    .sphere5 {
+      position: absolute;
+      top: 900mm;
+      left: 440mm;
+      width: 100mm;
+      height: 100mm;
+      background: linear-gradient(60deg, rgb(70, 2, 60) 5%, rgb(147, 123, 45));
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+      backdrop-filter: blur(30mm);
+    }
+
+    .circle6 {
+      width: 240mm;
+      height: 180mm;
+      background: #00000000;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #670439 35%, #1d35ba 60%, transparent 81%, transparent 100%);
+      background-size: 420mm 6mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 40mm;
+      left: 45mm;
+      z-index: 2;
+    }
+
+    .sphere6 {
+      position: absolute;
+      top: 85mm;
+      left: 180mm;
+      width: 80mm;
+      height: 80mm;
+      background: linear-gradient(45deg, blue, red);
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 2;
+      backdrop-filter: blur(30mm);
+    }
+
+    .circle7 {
+      width: 240mm;
+      height: 180mm;
+      background: #00000000;
+      background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #670439 35%, #1d35ba 60%, transparent 81%, transparent 100%);
+      background-size: 420mm 6mm;
+      box-shadow: inset 0 0 3mm 3mm #0f0f0f00, 3mm 0 3mm 3mm #0f0f0f00;
+      border-radius: 50%;
+      opacity: 0.7;
+      position: absolute;
+      top: 40mm;
+      left: 180mm;
+      z-index: 2;
+    }
+
+    .sphere7 {
+      position: absolute;
+      top: 85mm;
+      left: 320mm;
+      width: 80mm;
+      height: 80mm;
+      background: linear-gradient(45deg, blue, red);
+      background-size: 180mm 3mm;
+      border-radius: 50%;
+      opacity: 0.7;
+      z-index: 1;
+      backdrop-filter: blur(30mm);
+    }
+
+  
+
+    .circle-container {
+            position: relative;
+            width: 500mm;
+            height: 500mm;
+            border-radius: 50%;
+            display: flex;
+            margin: 20px;
+            filter: blur(9px); /* Add blur effect to the circles */
+            transform: rotate(180deg);
+            background-color: linear-gradient(90deg, rgba(255,0,0,0) 0%, rgba(31,21,37,1) 59%);
+            top: 50mm;
+            left: 420mm;
+            overflow: hidden;
+            
+        }
+
+        .circle-container .cube {
+            position: absolute;
+            width: 170mm;
+            height: 210mm;
+            border-radius: 60%;
+            background-color: #9c1515;
+            transform-origin: 310mm 300mm;
+            border-radius: 8px;
+            filter: blur(500mm); /* Add blur effect to the cubes */
+        }
+
+        /* Different cube colors (red, blue, mustard) */
+        .cube:nth-child(3n+1) {
+            background-color: #2e4345; /* Red */
+        }
+        .cube:nth-child(3n+2) {
+            background-color: #416d6de9; /* Blue */
+        }
+        .cube:nth-child(3n+3) {
+            background: linear-gradient(90deg, rgb(185, 42, 42) 0%, rgb(145, 75, 75) 100%);
+        }
+
+        /* Position cubes in a circle rim */
+        .circle-container .cube:nth-child(1) { transform: rotate(0deg) translate(420mm); }
+        .circle-container .cube:nth-child(2) { transform: rotate(30deg) translate(100mm); }
+        .circle-container .cube:nth-child(3) { transform: rotate(160deg) translate(420mm); }
+        .circle-container .cube:nth-child(4) { transform: rotate(140deg) translate(600mm); }
+        .circle-container .cube:nth-child(5) { transform: rotate(120deg) translate(400mm); }
+        .circle-container .cube:nth-child(6) { transform: rotate(150deg) translate(30mm); }
+        .circle-container .cube:nth-child(7) { transform: rotate(0deg) translate(540mm); }
+        .circle-container .cube:nth-child(8) { transform: rotate(210deg) translate(300mm); }
+        .circle-container .cube:nth-child(9) { transform: rotate(200deg) translate(500mm); }
+        .circle-container .cube:nth-child(10) { transform: rotate(270deg) translate(200mm); }
+        .circle-container .cube:nth-child(11) { transform: rotate(300deg) translate(300mm); }
+        .circle-container .cube:nth-child(12) { transform: rotate(330deg) translate(300mm); }
+        .circle-container .cube:nth-child(13) { transform: rotate(34deg) translate(200mm); }
+        .circle-container .cube:nth-child(14) { transform: rotate(360deg) translate(40mm); }
+
+
+        .pallo-container {
+      position: relative;
+      width: 400mm; /* Width of the large circle */
+      height: 400mm;
+      border-radius: 57% 43% 52% 48% / 53% 60% 40% 47%;
+      top: 300mm;
+      left: 200mm;
+      background-color: #2507072b;
+      overflow: hidden;
+      
+    }
+
+    /* Each small circle */
+    .small-circle {
+      position: absolute;
+      width: 280mm;  /* Width of small circles */
+      height: 210mm; /* Height of small circles */
+      top: 100mm;
+      left: 50mm;
+      border-radius: 79% 21% 52% 48% / 53% 31% 69% 47%;
+      background-color: rgba(7, 19, 102, 0.366); /* White with opacity */
+      backdrop-filter: blur(700mm); /* Blur effect */
+      box-shadow: 0 0 40px rgba(109, 10, 10, 0.8); /* Soft glow */
+      filter: blur(12mm); /* Add blur effect to the cubes */
+    }
+
+    /* Positioning the 12 circles in a circular layout */
+    .small-circle:nth-child(1) { transform: rotate(0deg) translate(600px); }
+    .small-circle:nth-child(2) { transform: rotate(0deg) translate(300px); }
+    .small-circle:nth-child(3) { transform: rotate(0deg) translate(400px); }
+    .small-circle:nth-child(4) { transform: rotate(0deg) translate(500px); }
+    .small-circle:nth-child(5) { transform: rotate(120deg) translate(300px); }
+    .small-circle:nth-child(6) { transform: rotate(60deg) translate(120px); }
+    .small-circle:nth-child(7) { transform: rotate(180deg) translate(220px); }
+    .small-circle:nth-child(8) { transform: rotate(210deg) translate(2000px); }
+    .small-circle:nth-child(9) { transform: rotate(240deg) translate(300px); }
+    .small-circle:nth-child(10) { transform: rotate(270deg) translate(120px); }
+    .small-circle:nth-child(11) { transform: rotate(300deg) translate(120px); }
+    .small-circle:nth-child(12) { transform: rotate(20deg) translate(-300px); }
+
+    .small-circle:nth-child(3n+1) {
+            background-color: #ac4d0095; /* Red */
+        }
+        .small-circle:nth-child(3n+2) {
+            background-color: #47416de9; /* Blue */
+        }
+
+        
+
+.box {
+  width: 8000px;
+  aspect-ratio: 1;
+  border: 1px solid;
+  background: conic-gradient(at 75% 25%, red 90deg, blue 0 225deg, yellow 0);
+  background-size: 50px 50px;
+
+  opacity: 1%;
+  z-index: -1;
+}
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <!-- CROP MARKS - ÄLÄ POISTA! -->
+    <div class="cropmark topleft"></div>
+    <div class="cropmark topright"></div>
+    <div class="cropmark bottomleft"></div>
+    <div class="cropmark bottomright"></div>
+
+
+    <div class="poster-content">
+      <!-- JULISTEEN SISÄLTÖ NÄIDEN KAHDEN KOMMENTIN VÄLIIN -->
+      
+      
+
+<div class="box"></div>
+
+
+     
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+      <div class="circle5"></div>
+      <div class="circle6"></div>
+      <div class="circle7"></div>
+      <div class="circle8"></div>
+      <div class="circle9"></div>
+      <div class="circle10"></div>
+      <div class="circle11"></div>
+      <div class="circle12"></div>
+      <div class="circle13"></div>
+
+      <div class="sphere1"></div>
+      <div class="sphere2"></div>
+      <div class="sphere3"></div>
+      <div class="sphere4"></div>
+      <div class="sphere5"></div>
+      <div class="sphere6"></div>
+      <div class="sphere7"></div>
+
+      <div class="circle-container">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+
+    <div class="pallo-container">
+      <!-- 12 smaller circles inside the container -->
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+      <div class="small-circle"></div>
+    </div>
+
+      <!-- JULISTEEN SISÄLTÖ NÄIDEN KAHDEN KOMMENTIN VÄLIIN -->
+    </div>
+  </main>
+</body>
+</html>

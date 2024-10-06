@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>juliste testi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f0f0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        .container {
+            margin-top: 20vmin;
+     
+        }
+
+
+        .circle2 {
+            width: 80vmin;
+            height: 60vmin;
+            background: #00000000;
+            background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #670439 35%, #1d35ba 60%, transparent 81%, transparent 100%);
+            background-size: 140vmin 2vmin;
+ 
+            box-shadow: inset 0 0 1vmin 1vmin #0f0f0f00, 1vmin 0 1vmin 1vmin #0f0f0f00;
+            border-radius: 50%;
+            opacity: 0.7;
+            transform: scale(0.8);
+            position: absolute;
+            top: 20%;
+            left: 10%;
+        }
+
+
+
+        .circle5 {
+            width: 90vmin;
+            height: 90vmin;
+            background: #5d050500;
+            background-image: radial-gradient(40% 50% at 70% 50%, transparent 10%, #9d5604 35%, #4d1ab3 60%, transparent 81%, transparent 100%);
+            background-size: 150vmin 1vmin;
+            
+ 
+            box-shadow: inset 0 0 1vmin 1vmin #0f0f0f00, 1vmin 0 1vmin 1vmin #0f0f0f00;
+            border-radius: 50%;
+            opacity: 0.7;
+            transform: scale(.6);
+            position: absolute;
+            top: 90%;
+            left: 30%;
+            z-index: -4;
+        }
+
+        .sphere1 {
+            position: absolute;
+            top: 104%;
+            left: 42%;
+            width: 60vmin;
+            height: 60vmin;
+            background: #00000000;
+            background: linear-gradient(60deg, rgb(70, 2, 60) 05%, rgb(147, 123, 45));
+            background-size: 60vmin 1vmin;
+            
+ 
+            border-radius: 50%;
+            opacity: 0.7;
+            transform: scale(0.3);
+            z-index: -7;
+            backdrop-filter:blur(100px);
+
+        }
+
+        
+        .sphere2 {
+            position: absolute;
+            top: 20%;
+            left: 22%;
+            width: 60vmin;
+            height: 60vmin;
+            background: #00000000;
+            background: linear-gradient(45deg, blue, red);
+            background-size: 60vmin 1vmin;
+        
+ 
+            border-radius: 50%;
+            opacity: 0.7;
+            transform: scale(0.3);
+            z-index: -3;
+            backdrop-filter:blur(100px);
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle2"></div>
+        <div class="sphere1"></div>
+        <div class="circle5"></div>
+        <div class="circle4"></div>
+        <div class="sphere2"></div>
+    </div>
+
+
+</body>
+</html>
